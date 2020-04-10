@@ -1,0 +1,8 @@
+/Users/levsvalov/RiderProjects/GeneticAlgo/GeneticAlgo/bin/Debug/GeneticAlgo.exe
+/Users/levsvalov/RiderProjects/GeneticAlgo/GeneticAlgo/bin/Debug/GeneticAlgo.pdb
+/Users/levsvalov/RiderProjects/GeneticAlgo/GeneticAlgo/bin/Debug/System.Drawing.Common.dll
+/Users/levsvalov/RiderProjects/GeneticAlgo/GeneticAlgo/obj/Debug/GeneticAlgo.csprojAssemblyReference.cache
+/Users/levsvalov/RiderProjects/GeneticAlgo/GeneticAlgo/obj/Debug/GeneticAlgo.csproj.CoreCompileInputs.cache
+/Users/levsvalov/RiderProjects/GeneticAlgo/GeneticAlgo/obj/Debug/GeneticAlgo.csproj.CopyComplete
+/Users/levsvalov/RiderProjects/GeneticAlgo/GeneticAlgo/obj/Debug/GeneticAlgo.exe
+/Users/levsvalov/RiderProjects/GeneticAlgo/GeneticAlgo/obj/Debug/GeneticAlgo.pdb
