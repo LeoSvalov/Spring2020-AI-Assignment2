@@ -1,27 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6257f93-49c4-413e-944d-4a0d87052ca1" name="Default Changelist" comment="" />
+    <list default="true" id="b6257f93-49c4-413e-944d-4a0d87052ca1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.GeneticAlgo/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GeneticAlgo/MainProgram.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GeneticAlgo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GeneticAlgo/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GeneticAlgo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GeneticAlgo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/512x512/kobe1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/512x512/kobe2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/512x512/kobe3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/GeneticAlgo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/GeneticAlgo.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/GeneticAlgorithm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/GeneticAlgorithm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/bin/Debug/GeneticAlgo.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/bin/Debug/GeneticAlgo.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/bin/Debug/GeneticAlgo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/bin/Debug/GeneticAlgo.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/bin/Debug/output.png" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/bin/Debug/output.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/dna.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/dna.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.exe" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/obj/Debug/GeneticAlgo.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GeneticAlgo/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/GeneticAlgo/packages.config" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/GeneticAlgo/dna.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GeneticAlgo/GeneticAlgorithm.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GeneticAlgo/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GeneticAlgo/MyRectangle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GeneticAlgo/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GeneticAlgo/MainProgram.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/GeneticAlgo/dna.cs" />
+        <option value="$PROJECT_DIR$/GeneticAlgo/Polygon.cs" />
+        <option value="$PROJECT_DIR$/GeneticAlgo/Main.cs" />
         <option value="$PROJECT_DIR$/GeneticAlgo/Program.cs" />
+        <option value="$PROJECT_DIR$/GeneticAlgo/MyRectangle.cs" />
         <option value="$PROJECT_DIR$/GeneticAlgo/GeneticAlgorithm.cs" />
+        <option value="$PROJECT_DIR$/GeneticAlgo/MainProgram.cs" />
+        <option value="$PROJECT_DIR$/GeneticAlgo/dna.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1aLdDA2PnHjxNLxH960fQQfiTlE" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -29,9 +61,14 @@
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="GeneticAlgo" type="DotNetProject" factoryName=".NET Project">
@@ -60,39 +97,96 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586518685811</updated>
-      <workItem from="1586518687643" duration="12449000" />
+      <workItem from="1586518687643" duration="49073000" />
+      <workItem from="1586689502471" duration="699000" />
+      <workItem from="1586699582887" duration="18353000" />
+      <workItem from="1586757680931" duration="20252000" />
+      <workItem from="1586842667165" duration="8355000" />
+      <workItem from="1586856868022" duration="195000" />
+      <workItem from="1586867904154" duration="5755000" />
+      <workItem from="1587021742236" duration="2984000" />
+      <workItem from="1587052104440" duration="913000" />
+      <workItem from="1587099753748" duration="5108000" />
+      <workItem from="1587127707321" duration="284000" />
+      <workItem from="1587152149841" duration="1822000" />
+      <workItem from="1587156920576" duration="207000" />
+      <workItem from="1587189029561" duration="20248000" />
+      <workItem from="1587283405958" duration="13320000" />
+      <workItem from="1587361062807" duration="4922000" />
+      <workItem from="1587375000810" duration="1834000" />
+      <workItem from="1587623209067" duration="2557000" />
+      <workItem from="1587653803811" duration="5811000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1586547286312">
+    <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587283493742">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586547286312" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1586532729394" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1586547286309">
+    <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1587283493742" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1587662717558">
+      <screen x="0" y="23" width="1440" height="832" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.0.1440.900@0.0.1440.900" timestamp="1587662647780" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.23.1440.832@0.23.1440.832" timestamp="1587662717558" />
+    <state width="1398" height="255" key="GridCell.Tab.0.bottom" timestamp="1587671832284">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586547286309" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1586532729390" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1586547286307">
+    <state width="1398" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1587671832284" />
+    <state width="1398" height="347" key="GridCell.Tab.0.bottom/0.23.1440.810@0.23.1440.810" timestamp="1586781964369" />
+    <state width="1398" height="225" key="GridCell.Tab.0.bottom/0.23.1440.832@0.23.1440.832" timestamp="1587627249653" />
+    <state width="1398" height="255" key="GridCell.Tab.0.center" timestamp="1587671832283">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586547286307" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1586532729389" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1586547286310">
+    <state width="1398" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1587671832283" />
+    <state width="1398" height="347" key="GridCell.Tab.0.center/0.23.1440.810@0.23.1440.810" timestamp="1586781964367" />
+    <state width="1398" height="225" key="GridCell.Tab.0.center/0.23.1440.832@0.23.1440.832" timestamp="1587627249651" />
+    <state width="1398" height="255" key="GridCell.Tab.0.left" timestamp="1587671832282">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586547286310" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1586532729391" />
-    <state x="383" y="194" width="672" height="678" key="search.everywhere.popup" timestamp="1586520494671">
+    <state width="1398" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1587671832282" />
+    <state width="1398" height="347" key="GridCell.Tab.0.left/0.23.1440.810@0.23.1440.810" timestamp="1586781964366" />
+    <state width="1398" height="225" key="GridCell.Tab.0.left/0.23.1440.832@0.23.1440.832" timestamp="1587627249651" />
+    <state width="1398" height="255" key="GridCell.Tab.0.right" timestamp="1587671832283">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="383" y="194" width="672" height="678" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586520494671" />
+    <state width="1398" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1587671832283" />
+    <state width="1398" height="347" key="GridCell.Tab.0.right/0.23.1440.810@0.23.1440.810" timestamp="1586781964369" />
+    <state width="1398" height="225" key="GridCell.Tab.0.right/0.23.1440.832@0.23.1440.832" timestamp="1587627249652" />
+    <state x="390" y="137" key="RiderGenerateDialog" timestamp="1586588653846">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="390" y="137" key="RiderGenerateDialog/0.0.1440.900@0.0.1440.900" timestamp="1586588653846" />
+    <state x="229" y="59" key="SettingsEditor" timestamp="1587374900499">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="59" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1587374900499" />
+    <state x="229" y="78" key="SettingsEditor/0.23.1440.832@0.23.1440.832" timestamp="1587213815977" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1587666056806">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1587666056806" />
+    <state x="383" y="194" width="672" height="678" key="search.everywhere.popup" timestamp="1586596427101">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="383" y="194" width="672" height="678" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586596427101" />
   </component>
 </project>

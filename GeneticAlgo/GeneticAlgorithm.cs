@@ -1,76 +1,71 @@
 using System.Collections.Generic;
 using System;
-using System.Drawing;
-using GeneticAlgo;
 
 namespace GeneticAlgo
 {
     public class GeneticAlgorithm<T>
     {
-        public List<dna<T>> Population { get; private set; }
+        
+        public List<Dna<T>> Population { get; private set; } /* Population of the current generation */
         public int GenerationNumber { get; private set; }
         public float BestFitness { get; private set; }
-        public T[,] BestGenes { get; private set; }
-        public int Elitism;
-        public float MutationRate;
-        private List<dna<T>> newPopulation;
-        private Random random;
-        private float fitnessSum;
-        public GeneticAlgorithm(int populationSize, int dnaSizeX,int dnaSizeY, Random random, Func<T> getRandomGene, Func<int, float> fitnessFunction, int elitism, float mutationRate = 0.01f)
+        public T[] BestGenes { get; } /* The intermediate image(or list of genes) that has the best fitness score in the population*/
+        private readonly int _elitism; 
+        private readonly float _mutationRate;
+        private List<Dna<T>> _newPopulation;
+        private Random _random;
+        
+        /* Constructor */
+        public GeneticAlgorithm(int populationSize, int dnaSize, Random random, Func<int,bool,T,T> getRandomGene, Func<int, float> fitnessFunction, int elitism, float mutationRate = 0.01f)
         {
             GenerationNumber = 1;
-            Elitism = elitism;
-            MutationRate = mutationRate;
-            Population = new List<dna<T>>(populationSize);
-            newPopulation = new List<dna<T>>(populationSize);
-            this.random = random;
-            BestGenes = new T[dnaSizeX,dnaSizeY];
+            _elitism = elitism;
+            _mutationRate = mutationRate;
+            Population = new List<Dna<T>>(populationSize);
+            _newPopulation = new List<Dna<T>>(populationSize);
+            this._random = random;
+            BestGenes = new T[dnaSize];
             for (int i = 0; i < populationSize; i++)
             {
-                Population.Add(new dna<T>(dnaSizeX,dnaSizeY,random,getRandomGene,fitnessFunction,true));
+                Population.Add(new Dna<T>(dnaSize,random,getRandomGene,fitnessFunction));
             }
         }
 
+        /* The process of the selection of genes for new generation*/
         public void NewGeneration()
         {
-            if (Population.Count<=0)
-            {
-                return;
-            }
-
             CalculateFitness();
             Population.Sort(CompareDna);
-            newPopulation.Clear();
+            _newPopulation.Clear();
+            
             for (int i = 0; i < Population.Count; i++)
             {
-                if (i< Elitism)
+                if (i < _elitism) /* first(and best as it's sorted) genes of the previous generations are added directly w/o crossover & mutation */
                 {
-                    newPopulation.Add(Population[i]);
+                    _newPopulation.Add(Population[i]);
                 }
                 else
                 {
-                    var parents= ChooseParents();
-                    dna<T> parent1 = parents.Item1;
-                    dna<T> parent2 = parents.Item2; 
-                    
-                    dna<T> child = parent1.Crossover(parent2);
-                    child.Mutate(MutationRate);
-                    newPopulation.Add(child);
+                    var parents= ChooseParents(); /* choose 2 best parents for crossover*/
+                    Dna<T> parent1 = parents.Item1;
+                    Dna<T> parent2 = parents.Item2;
+                    Dna<T> child = parent1.Crossover(parent2);
+                    child.Mutate(_mutationRate);
+                    _newPopulation.Add(child);
                 }
             }
-
-            List<dna<T>> tmpList = Population;
-            Population = newPopulation;
-            newPopulation = tmpList;
+            List<Dna<T>> tmpList = Population;
+            Population = _newPopulation;
+            _newPopulation = tmpList;
             GenerationNumber++;
         }
 
-        public int CompareDna(dna<T> a, dna<T> b)
+        private int CompareDna(Dna<T> a, Dna<T> b)
         {
-            if (a.fitness > b.fitness)
+            if (a.Fitness > b.Fitness)
             {
                 return -1;
-            }else if (a.fitness < b.fitness)
+            }else if (a.Fitness < b.Fitness)
             {
                 return 1;
             }
@@ -80,52 +75,46 @@ namespace GeneticAlgo
             }
         }
 
-        public void CalculateFitness()
+        /* Calculation of fitness score using method that is implemented in MainProgram.cs */
+        private void CalculateFitness()
         {
-            fitnessSum = 0;
-            dna<T> best = Population[0];
+            Dna<T> best = Population[0];
             
-            for (int i = 0; i < Population.Count; i++)
+            for (var i = 0; i < Population.Count; i++)
             {
-                fitnessSum += Population[i].CalculateFitness(i);
-                if (Population[i].fitness > best.fitness)
+                Population[i].Fitness = Population[i].CalculateFitness(i);
+                if (Population[i].Fitness > best.Fitness)
                 {
                     best = Population[i];
                 }
             }
-            BestFitness = best.fitness;
-            for (int i = 0; i < best.Genes.GetLength(0); i++)
-            {
-                for (int j = 0; j < best.Genes.GetLength(1); j++)
-                {
-                    BestGenes[i, j] = best.Genes[i, j];
-                }
-            }
+            BestFitness = best.Fitness;
+            best.Genes.CopyTo(BestGenes, 0);
         }
 
-        private Tuple<dna<T>,dna<T>> ChooseParents()
+        /* Choose 2 images with the highest fitness scores */
+        private Tuple<Dna<T>,Dna<T>> ChooseParents()
         {
             float max1 = -1;
-            int ind_1 = -1;
-            int ind_2 = -1;
+            int ind1 = -1;
+            int ind2 = -1;
             float max2 =  -1;
-            
+ 
             for (int i = 0; i < Population.Count; i++)
             {
-                if (Population[i].fitness > max1) 
+                if (Population[i].Fitness > max1) 
                 {
                     max2 = max1;
-                    ind_2 = ind_1;
-                    ind_1 = i;
-                    max1 = Population[i].fitness; 
-                }else if (Population[i].fitness > max2) 
+                    ind2 = ind1;
+                    ind1 = i;
+                    max1 = Population[i].Fitness; 
+                }else if (Population[i].Fitness > max2)
                 {
-                    max2 = Population[i].fitness;
-                    ind_2 = i;
-                } 
+                    max2 = Population[i].Fitness;
+                    ind2 = i;
+                }
             }
-            return new Tuple<dna<T>, dna<T>>(Population[ind_1], Population[ind_2]);
+            return new Tuple<Dna<T>, Dna<T>>(Population[ind1], Population[ind2]);
         }
-        
     }
 }

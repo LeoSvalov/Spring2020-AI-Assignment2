@@ -1,78 +1,69 @@
-using System.Collections.Generic;
 using System;
-using GeneticAlgo;
+
 namespace GeneticAlgo
 {
-    public class dna<T>
+    public class Dna<T>
     {
-        public T[,] Genes { get; private set; }
-        public  float  fitness { get; private set; }
-
         
-        private Random random;
-        private Func<T> getRandomGene;
-        private Func<int, float> fitnessFunction;
-        public dna(int sizeX, int sizeY, Random random, Func<T> getRandomGene, Func<int, float> fitnessFunction , bool shouldInitGenes = true)
+        /* List of rectangles in the image. There are 64 rectangles(genes) on the image, index of list shows the rectangle position on the image,
+           where 8 rectangles in 1 row, we go from left-up rectangle, to right-bottom rectangle. */
+        public T[] Genes { get; } 
+        public  float  Fitness { get; set; }
+        private readonly Random _random;
+        private readonly Func<int,bool,T,T> _getRandomGene;
+        private readonly Func<int, float> _fitnessFunction;
+        
+        /* Constructor */
+        public Dna(int size, Random random, Func<int,bool,T,T> getRandomGene, Func<int, float> fitnessFunction , bool shouldInitGenes = true)
         {
-            Genes = new T[sizeX,sizeY];
-            this.random = random;
-            this.getRandomGene = getRandomGene;
-            this.fitnessFunction = fitnessFunction;
-            if (shouldInitGenes)
+            Genes = new T[size];
+            this._random = random;
+            this._getRandomGene = getRandomGene;
+            this._fitnessFunction = fitnessFunction;
+            if (!shouldInitGenes) return;
+            for (var i = 0; i < size; i++)
             {
-                for (int i = 0; i < sizeY; i++)
-                {
-                    for (int j = 0; j < sizeX; j++)
-                    {
-                        Genes[i,j] = getRandomGene();
-                    }
-                }
+                Genes[i] = getRandomGene(i,false,default);
             }
-            
         }
 
         public float CalculateFitness(int index)
         {
-            float Fitness = fitnessFunction(index);
-            return Fitness;
+            float fitness = _fitnessFunction(index);
+            return fitness;
         }
-
-        public dna<T> Crossover(dna<T> otherParent)
+        
+        /* The crossover between 2 images, it takes rectangle from 1st if random double < 0.5 else it takes from 2nd parent */
+        public Dna<T> Crossover(Dna<T> otherParent)
         {
-            dna<T> child = new dna<T>(Genes.GetLength(1), Genes.GetLength(0),random, getRandomGene, fitnessFunction, false);
-
-            for (int i = 0; i < Genes.GetLength(0); i++)
+            Dna<T> child = new Dna<T>(Genes.Length,_random, _getRandomGene, _fitnessFunction, false);
+            for (int i = 0; i < Genes.Length; i++)
             {
-                for (int j = 0; j < Genes.GetLength(1); j++)
+                double n = _random.NextDouble();
+                if (n < 0.5)
                 {
-
-
-                    if (random.NextDouble() < 0.5)
-                    {
-                        child.Genes[i,j] = Genes[i,j];
-                    }
-                    else
-                    {
-                        child.Genes[i,j] = otherParent.Genes[i,j];
-                    }
+                    child.Genes[i] = Genes[i];
                 }
+                else 
+                {
+                    child.Genes[i] = otherParent.Genes[i];
+                }
+              
             }
             return child;
         }
 
+        /* The mutation is generate new color for the particular rectangle if the random number is less than the constant mutation rate */
         public void Mutate(float mutationRate)
         {
-            for (int i = 0; i < Genes.GetLength(0); i++)
+            for (int i = 0; i < Genes.Length; i++)
             {
-                for (int j = 0; j < Genes.GetLength(1); j++)
+                if (_random.NextDouble() < mutationRate)
                 {
-                    if (random.NextDouble() < mutationRate)
-                    {
-                        Genes[i,j] = getRandomGene();
-                    }
+                    var tmp = _getRandomGene(i,true,Genes[i]);
+                    Genes[i] = tmp;
                 }
             }
         }
-        
     }
 }
