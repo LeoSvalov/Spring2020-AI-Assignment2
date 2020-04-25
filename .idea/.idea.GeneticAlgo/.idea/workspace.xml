@@ -30,6 +30,7 @@
         <option value="$PROJECT_DIR$/GeneticAlgo/GeneticAlgorithm.cs" />
         <option value="$PROJECT_DIR$/GeneticAlgo/MainProgram.cs" />
         <option value="$PROJECT_DIR$/GeneticAlgo/dna.cs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -98,6 +99,7 @@
       <workItem from="1587623209067" duration="2557000" />
       <workItem from="1587653803811" duration="5811000" />
       <workItem from="1587750084703" duration="493000" />
+      <workItem from="1587750810530" duration="383000" />
     </task>
     <task id="LOCAL-00001" summary="Approximately final commit">
       <created>1587750322746</created>
@@ -106,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587750322746</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix .gitignore and add examples of output">
+      <created>1587751161369</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587751161369</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +138,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Approximately final commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Approximately final commit" />
+    <MESSAGE value="Fix .gitignore and add examples of output" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix .gitignore and add examples of output" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587750249633">
@@ -174,10 +184,10 @@
     </state>
     <state x="229" y="59" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1587374900499" />
     <state x="229" y="78" key="SettingsEditor/0.23.1440.832@0.23.1440.832" timestamp="1587213815977" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1587750361511">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1587751178424">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1587750361511" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1587751178424" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1587666056806">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
